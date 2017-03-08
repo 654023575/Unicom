@@ -1,0 +1,456 @@
+<div class="bg-light lter b-b wrapper">
+    <h1 class="m-n font-thin h3">环动监控</h1>
+</div>
+<div  class="wrapper" ng-controller="Monitor1Controller">
+	<div class="row">
+		 <div class="col-xs-6">
+	          <h4>动环监控</h4>
+	     </div>
+     </div>
+  <tabset class="tab-container">
+  <tab heading="UPS">
+	 <div class="monitor">
+    	<div class="monitor-1">
+                <ul>
+                <li>Output Vab</li>
+                <li>Output Vac</li>
+                <li>Output Vbc</li>
+                </ul>
+                <table>
+                    <tr>
+                        <td>461.3V</td>
+                    </tr>
+                    <tr>
+                        <td>462.0V</td>
+                    </tr>
+                    <tr>
+                        <td>460.3V</td>
+                    </tr>
+                </table>
+    	</div>
+        <div class="monitor-2" >
+                <ul>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Power</li>
+                <li>Output Vab</li>
+                <li>Output Vac</li>
+                <li>Output Vbc</li>
+                </ul>
+                <table >
+                    <tr>
+                        <td> 123.5 KW</td>
+                    </tr>
+                    <tr>
+                        <td>461.3V</td>
+                    </tr>
+                    <tr>
+                        <td>462.0V</td>
+                    </tr>
+                    <tr>
+                        <td>460.3V</td>
+                    </tr>
+                </table>
+        </div>
+
+        <div class="monitor-3 m-status">
+            <span class="fa fa-circle grey"></span> UPS 1 on Vattery
+                <ul>
+                <li>Output Vab</li>
+                <li>Output Vac</li>
+                <li>Output Vbc</li>
+                <li>&nbsp;&nbsp;&nbsp;Output la</li>
+                <li>&nbsp;&nbsp;&nbsp;Output lb</li>
+                <li>&nbsp;&nbsp;&nbsp;Output lc</li>
+                </ul>
+                <table>
+                    <tr>
+                        <td>461.3V</td>
+                    </tr>
+                    <tr>
+                        <td>462.0V</td>
+                    </tr>
+                    <tr>
+                        <td>460.3V</td>
+                    </tr>
+                    <tr>
+                        <td>34.7A</td>
+                    </tr>
+                    <tr>
+                        <td>34.7A</td>
+                    </tr>
+                    <tr>
+                        <td>34.7A</td>
+                    </tr>
+                </table>
+        </div>
+         <div class="monitor-4 m-status">
+        	<span class="fa fa-circle grey" ></span> Run Status <br>
+        	<span class="fa fa-circle green"></span> General Alarm            
+        </div>
+        
+         <div class="monitor-5 m-status">
+            Transfer SWitch <br>
+            <span class="fa fa-circle green" ></span> Utility Power <br>
+        	<span class="fa fa-circle grey" ></span> Emergency Power
+        </div>
+        
+        <div class="monitor-6 m-status">
+        	<span class="fa fa-circle green" ></span> Run Status <br>
+        	<span class="fa fa-circle green"></span> General Alarm 
+        </div>
+        
+         <div class="monitor-7 ">
+        	
+                <ul>
+                <li>Emergency Vab</li>
+                <li>Emergency Vac</li>
+                <li>Emergency Vbc</li>
+                </ul>
+                <table>
+                    <tr>
+                        <td>461.3V</td>
+                    </tr>
+                    <tr>
+                        <td>462.0V</td>
+                    </tr>
+                    <tr>
+                        <td>460.3V</td>
+                    </tr>
+                </table>
+        </div>
+        <div class="monitor-8 m-status">
+        	<span class="fa fa-circle green"></span> UPS 2 on Vattery
+                <ul>
+                <li>Output Vab</li>
+                <li>Output Vac</li>
+                <li>Output Vbc</li>
+                <li>&nbsp;&nbsp;&nbsp;Output la</li>
+                <li>&nbsp;&nbsp;&nbsp;Output lb</li>
+                <li>&nbsp;&nbsp;&nbsp;Output lc</li>
+                </ul>
+                <table>
+                    <tr>
+                        <td>461.3V</td>
+                    </tr>
+                    <tr>
+                        <td>462.0V</td>
+                    </tr>
+                    <tr>
+                        <td>460.3V</td>
+                    </tr>
+                    <tr>
+                        <td>34.7A</td>
+                    </tr>
+                    <tr>
+                        <td>34.7A</td>
+                    </tr>
+                    <tr>
+                        <td>34.7A</td>
+                    </tr>
+                </table>
+        </div>
+    </div>
+  </tab>
+  <tab heading="发电机">
+  	<div style= "height:600px">
+  	 <div class="monitor-1-1">
+    </div>
+    <div align="center" >
+        <div class="mon1">
+            <div class="mon1-1">
+                <table><tr><td>Generator #1</td></tr></table>
+            </div>
+            <div class="mon1-2">
+                <table border="1">
+                    <tr>
+                        <td>
+                            <button type="button" class="btn btn-block btn-sm">Disabled</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="button" class="btn btn-info btn-block btn-sm">Manual Enable</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="button" class="btn btn-info btn-block btn-sm">Manual Disabled</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="button" class="btn btn-info btn-block btn-sm">Auto</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="mon1-3" align="center">
+                <ul>
+                    <li>
+                        <span class="fa fa-circle"></span>
+                        <b>Run Status</b>
+                    </li>
+                    <li>
+                        <span class="fa fa-circle"></span>
+                        <b>General Alarm</b>
+                    </li>
+                    <li>
+                        <span class="fa fa-circle"></span>
+                        <b>Emergency Stop</b>
+                    </li>
+                    <li>
+                        <span class="fa fa-circle"></span>
+                        <b>Dirty Fiter</b>
+                    </li>
+                    <li>
+                        <span class="fa fa-circle"></span>
+                        <b>Low Oil Pressure</b>
+                    </li>
+                    <li>
+                        <span class="fa fa-circle"></span>
+                        <b>Fail To Start</b>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="mon2">
+            <div class="mon2-1">
+                <table border="1">
+                    <tr><td>Fuel Systems</td></tr>
+                </table>
+            </div>
+            <div class="mon2-2">
+                <div class="mon2-2-1">
+                    <div class="mon2-2-11" align="center">
+                        <div>Trank 1</div>
+                    </div>
+                </div>
+                <div class="mon2-2-2">
+                  <div class="mon2-2-21">
+                      <p>Transfer 1-2</p>
+                      <table border="1">
+                          <tr>
+                              <td>
+                                  <button type="button" class="btn btn-info btn-block btn-sm">Enable</button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                  <button type="button" class="btn btn-info btn-block btn-sm">Disabled</button>
+                              </td>
+                          </tr>
+                      </table>
+                  </div>
+                  <div class="mon2-2-22">
+                      <a href="#">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                      </a>
+                      <br>
+                      <a href="#">
+                          <span class="glyphicon glyphicon-arrow-left"></span>
+                      </a>
+                  </div>
+                  <div class="mon2-2-21">
+                      <p>Transfer 2-1</p>
+                      <table border="1">
+                          <tr>
+                              <td>
+                                  <button type="button" class="btn btn-info btn-block btn-sm">Enable</button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                  <button type="button" class="btn btn-info btn-block btn-sm">Disabled</button>
+                              </td>
+                          </tr>
+                      </table>
+                  </div>
+                </div>
+                <div class="mon2-2-3">
+                    <div class="mon2-2-31" align="center">
+                        <div>Trank 2</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mon1">
+            <div class="mon1-1">
+                <table border="1">
+                    <tr><td>Generator #2</td></tr>
+                </table>
+            </div>
+            <div class="mon1-2">
+                <table border="1">
+                    <tr>
+                        <td>
+                            <button type="button" class="btn btn-block btn-sm">Disabled</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="button" class="btn btn-info btn-block btn-sm">Manual Enable</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="button" class="btn btn-info btn-block btn-sm">Manual Disabled</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="button" class="btn btn-info btn-block btn-sm">Auto</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="mon1-3" align="center">
+                <ul>
+                    <li>
+                        <span class="fa fa-circle"></span>
+                        <b>Run Status</b>
+                    </li>
+                    <li>
+                        <span class="fa fa-circle"></span>
+                        <b>General Alarm</b>
+                    </li>
+                    <li>
+                        <span class="fa fa-circle"></span>
+                        <b>Emergency Stop</b>
+                    </li>
+                    <li>
+                        <span class="fa fa-circle"></span>
+                        <b>Dirty Fiter</b>
+                    </li>
+                    <li>
+                        <span class="fa fa-circle"></span>
+                        <b>Low Oil Pressure</b>
+                    </li>
+                    <li>
+                        <span class="fa fa-circle"></span>
+                        <b>Fail To Start</b>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+  </tab>
+ <tab heading="空调">
+     <div class="row">
+            <div class="col-md-3">
+                    <div>
+                        <img src="views/imgs/air-condition.png" alt="">
+                </div>
+                <div class="kt1">
+                        <ul>
+                            <li>
+                                <span class="fa fa-circle stop"></span>
+                                <b>停止</b>
+                            </li>
+                            <li>
+                                <span class="fa fa-circle alarm"></span>
+                                <b>报警</b>
+                            </li>
+                            <li>
+                                <span class="fa fa-circle normal"></span>
+                                <b>正常/运行</b>
+                            </li>
+                        </ul>
+                </div>       
+            </div>
+
+            <div class="col-md-9" style="text-align:center;">
+                <h4>空调检测状态</h4>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th colspan="3" style="text-align:center;">空调参数</th>
+                            <th colspan="4" style="text-align:center;">运行状态</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>温度</td>
+                            <td>20.5</td>
+                            <td>℃</td>
+                            <td>空调加热器运行</td>
+                            <td><span class="fa fa-circle normal"></span></td>
+                            <td>空调送风温度过高</td>
+                            <td><span class="fa fa-circle alarm"></span></td>
+                        </tr>
+                        <tr>
+                            <td>湿度</td>
+                            <td>45</td>
+                            <td>%</td>
+                            <td>空调压缩机运行</td>
+                            <td><span class="fa fa-circle alarm"></td>
+                            <td>空调送风湿度过高</td>
+                            <td><span class="fa fa-circle normal"></td>
+                        </tr>
+                        <tr>
+                            <td>设置温度</td>
+                            <td>20.5</td>
+                            <td>℃</td>
+                            <td>空调加湿器运行</td>
+                            <td><span class="fa fa-circle alarm"></td>
+                            <td>空调回风温度过第</td>
+                            <td><span class="fa fa-circle alarm"></td>
+                        </tr>
+                        <tr>
+                            <td>设置湿度</td>
+                            <td>20.5</td>
+                            <td>%</td>
+                            <td>空调运行</td>
+                            <td><span class="fa fa-circle alarm"></td>
+                            <td>空调回风湿度过低</td>
+                            <td><span class="fa fa-circle normal"></td>
+                        </tr>
+                        <tr>
+                            <td>运行时间</td>
+                            <td>199</td>
+                            <td>H</td>
+                            <td>空调压缩机</td>
+                            <td><span class="fa fa-circle alarm"></td>
+                            <td>空调送风温度过低</td>
+                            <td><span class="fa fa-circle normal"></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <div class="row">
+                    <div class="col col-md-6 ">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                空调温度
+                                <span class="pull-right"> <a><i
+                                        class="fa fa-search report-btn text-info-lter"></i></a> <a><i
+                                        class="fa fa-refresh report-btn text-info-lter"></i></a> <a><i
+                                        class="fa fa-arrows-alt report-btn text-info-lter"></i></a>
+                                </span>
+                            </div>
+                            <div class="panel-body">
+                                <div line-chart config="chartConfig" data="temTrends" height="200px"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-md-6 ">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                空调湿度
+                                <span class="pull-right"> <a><i
+                                        class="fa fa-search report-btn text-info-lter"></i></a> <a><i
+                                        class="fa fa-refresh report-btn text-info-lter"></i></a> <a><i
+                                        class="fa fa-arrows-alt report-btn text-info-lter"></i></a>
+                                </span>
+                            </div>
+                            <div class="panel-body">
+                                <div line-chart config="chartConfig" data="humTrends" height="200px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+ </tab>
+ </tabset>
+</div>

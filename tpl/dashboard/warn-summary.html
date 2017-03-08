@@ -1,0 +1,200 @@
+<div class="bg-light lter b-b wrapper">
+    <h1 class="m-n font-thin h3">告警汇总</h1>
+</div>
+
+<div class="wrapper" ng-controller="WarnSummaryController">
+    <div class="row m-r-none">
+        <div class="col-xs-6">
+            <h4>报表条件选择</h4>
+        </div>
+        <div class="pull-right">
+            <button class="btn w-xs btn-default">保存条件</button>
+            <button class="btn w-xs btn-default">定时发送</button>
+        </div>
+    </div>
+    <form role="form">
+        <div class="row m-r-none">
+            <section class="col-sm-2">
+                <div class="form-group">
+                    <label>基地：</label> <select class="form-control">
+						<option>哈尔滨基地</option>
+					</select>
+                </div>
+            </section>
+            <section class="col-sm-2">
+                <div class="form-group">
+                    <label>楼宇：</label> <select class="form-control">
+						<option>-所有楼宇-</option>
+					</select>
+                </div>
+            </section>
+            <section class="col-sm-2">
+                <div class="form-group">
+                    <label>模块：</label> <select class="form-control">
+						<option>-所有模块-</option>
+					</select>
+                </div>
+            </section>
+            <section class="col-sm-2">
+                <div class="form-group">
+                    <label>楼层：</label> <select class="form-control">
+						<option>-所有楼层-</option>
+					</select>
+                </div>
+            </section>
+            <section class="col-sm-2">
+                <div class="form-group">
+                    <label>机房：</label> <select class="form-control">
+						<option>-所有机房-</option>
+					</select>
+                </div>
+            </section>
+            <section class="col-sm-2">
+                <div class="form-group">
+                    <label>设备类型：</label> <select class="form-control">
+						<option>-所有类型-</option>
+					</select>
+                </div>
+            </section>
+        </div>
+        <div class="row m-r-none">
+            <section class="col-sm-2">
+                <div class="form-group">
+                    <label>设备：</label> <select class="form-control">
+						<option>-所有设备-</option>
+					</select>
+                </div>
+            </section>
+            <section class="col-sm-2">
+                <div class="form-group">
+                    <label>开始时间：</label>
+                    <div class="input-group date">
+                        <input type="text" class="form-control"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                    </div>
+                </div>
+            </section>
+            <section class="col-sm-2">
+                <div class="form-group">
+                    <label>结束时间：</label>
+                    <div class="input-group date">
+                        <input type="text" class="form-control"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                    </div>
+                </div>
+            </section>
+            <section class="pull-right m-t-md">
+                <button type="submit" class="btn w-xs btn-primary">提交</button>
+            </section>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    按专业类别汇总<span class="pull-right"> <a><i
+						class="fa fa-search report-btn text-info-lter"></i></a> <a><i
+						class="fa fa-refresh report-btn text-info-lter"></i></a> <a><i
+						class="fa fa-arrows-alt report-btn text-info-lter"></i></a>
+					</span>
+                </div>
+                <div class="panel-body">
+                    <div pie-chart config="chartConfig" data="warnSummary1" height="300px"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    按警告等级汇总<span class="pull-right"> <a><i
+						class="fa fa-search report-btn text-info-lter"></i></a> <a><i
+						class="fa fa-refresh report-btn text-info-lter"></i></a> <a><i
+						class="fa fa-arrows-alt report-btn text-info-lter"></i></a>
+					</span>
+                </div>
+                <div class="panel-body">
+                    <div pie-chart config="chartConfig" data="warnSummary2" height="300px"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading"><span class="pull-right"> <a><i
+						class="fa fa-search report-btn text-info-lter"></i></a> <a><i
+						class="fa fa-refresh report-btn text-info-lter"></i></a> <a><i
+						class="fa fa-arrows-alt report-btn text-info-lter"></i></a>
+					</span> 近6月告警趋势
+                </div>
+                <div class="panel-body">
+                    <div line-chart config="chartConfig" data="warnTrends" height="200px"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!--<div class="wrapper" ng-controller="WarnSummaryController">-->
+<!--<div class="row">-->
+<!--<div class="col col-md-3">-->
+<!--<div class="panel panel-default">-->
+<!--<div class="panel-heading">-->
+<!--一号楼本月告警汇总-->
+<!--</div>-->
+<!--<div class="panel-body">-->
+<!--<div pie-chart config="chartConfig" data="warnSummary1" height="200px"></div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col col-md-3">-->
+<!--<div class="panel panel-default">-->
+<!--<div class="panel-heading">-->
+<!--二号楼本月告警汇总-->
+<!--</div>-->
+<!--<div class="panel-body">-->
+<!--<div pie-chart config="chartConfig" data="warnSummary2" height="200px"></div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col col-md-3">-->
+<!--<div class="panel panel-default">-->
+<!--<div class="panel-heading">-->
+<!--三号楼本月告警汇总-->
+<!--</div>-->
+<!--<div class="panel-body">-->
+<!--<div pie-chart config="chartConfig" data="warnSummary3" height="200px"></div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col col-md-3">-->
+<!--<div class="panel panel-default">-->
+<!--<div class="panel-heading">-->
+<!--四号楼本月告警汇总-->
+<!--</div>-->
+<!--<div class="panel-body">-->
+<!--<div pie-chart config="chartConfig" data="warnSummary4" height="200px"></div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="row">-->
+<!--<div class="col col-md-12">-->
+<!--<div class="panel panel-default">-->
+<!--<div class="panel-heading">-->
+<!--近6月告警趋势-->
+<!--</div>-->
+<!--<div class="panel-body">-->
+<!--<div bar-chart config="chartConfig" data="warnTrends" height="200px"></div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->

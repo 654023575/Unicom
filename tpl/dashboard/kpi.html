@@ -1,0 +1,231 @@
+<div class="bg-light lter b-b wrapper">
+	<h1 class="m-n font-thin h3">领导视图</h1>
+</div>
+
+<div class="wrapper" ng-controller="KPIController">
+	<div class="row">
+		<div class="col col-md-8">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					11月统计分析图 <span class="pull-right"> <a><i
+							class="fa fa-search report-btn text-info-lter"></i></a> <a><i
+							class="fa fa-refresh report-btn text-info-lter"></i></a> <a><i
+							class="fa fa-arrows-alt report-btn text-info-lter"></i></a>
+					</span>
+				</div>
+				<div class="panel-body">
+					<div class="col col-md-6" style="padding: 0">
+						<div map-chart config="mapConfig" data="mapData" height="280px"></div>
+					</div>
+					<div class="col col-md-6">
+						<div class="col col-md-12">
+							<div bar-chart config="donutConfig0" data="donutData0"
+								height="40px"></div>
+						</div>
+						<div class="col col-md-6">
+							<div donut-chart config="donutConfig1" data="donutData1"
+								height="130px"></div>
+						</div>
+						<div class="col col-md-6">
+							<div donut-chart config="donutConfig2" data="donutData2"
+								height="130px"></div>
+						</div>
+						<div class="col col-md-6">
+							<div donut-chart config="donutConfig3" data="donutData3"
+								height="130px"></div>
+						</div>
+						<div class="col col-md-6">
+							<div donut-chart config="donutConfig4" data="donutData4"
+								height="130px"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col col-md-4">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					系统安全系数 &nbsp;&nbsp;&nbsp; <span style="font-size: 15px"><a popover="海恩法则(Heinrich's Law)，又名海因里希法则，是美国工业安全专家赫伯特·威廉·海因里希（Herbert William Heinrich）提出的一个在工业界关于工业安全的法则，海恩法则指出： 每一起严重事故的背后，必然有29次轻微事故和300起未遂先兆以及1000起事故隐患。法则强调两点：一是事故的发生是量的积累的结果；二是再好的技术，再完美的规章，在实际操作层面，也无法取代人自身的素质和责任心。" popover-placement="bottom" popover-title="海恩法则(Heinrich's Law)" popover-trigger="mouseenter" class="text-info-lter">海恩法则</a></span>
+					<span class="pull-right"> <a><i
+							class="fa fa-search report-btn text-info-lter"></i></a> <a><i
+							class="fa fa-refresh report-btn text-info-lter"></i></a> <a><i
+							class="fa fa-arrows-alt report-btn text-info-lter"></i></a>
+					</span>
+				</div>
+				<div class="panel-body">
+					<div class="table-responsive text-center" style="height: 300px;">
+
+						<div class="row no-gutter">
+<!-- 							<div class="col-md-4">
+							</div> -->
+							<div class="col-md-12">
+								<!-- <burble value='value' min='1' max='2' height="200"></burble> -->
+								<burble percentage='percentage' height="200"></burble>
+							</div>
+						</div>
+
+						<div class="row no-gutter">
+				            <div class="col-xs-4">
+				              <div class="wrapper">
+				                <span class="m-b-xs h3 block">300</span>
+				                <small class="text-muted">事故隐患</small>
+				              </div>
+				            </div>
+				            <div class="col-xs-4 dk">
+				              <div class="wrapper">
+				                <span class="m-b-xs h3 block">108</span>
+				                <small class="text-muted">未遂先兆</small>
+				              </div>
+				            </div>
+				            <div class="col-xs-4">
+				              <div class="wrapper">
+				                <span class="m-b-xs h3 block">15</span>
+				                <small class="text-muted">轻微事故</small>
+				              </div>
+				            </div>
+				        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col col-md-4">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					耗电量比较 <span class="pull-right"> <a><i
+							class="fa fa-search report-btn text-info-lter"></i></a> <a><i
+							class="fa fa-refresh report-btn text-info-lter"></i></a> <a><i
+							class="fa fa-arrows-alt report-btn text-info-lter"></i></a>
+					</span>
+				</div>
+				<div class="panel-body">
+					<div bar-chart config="chartConfig" data="powerTrends"
+						height="200px"></div>
+				</div>
+			</div>
+		</div>
+		<div class="col col-md-4">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					PUE对比图 <span class="pull-right"> <a><i
+							class="fa fa-search report-btn text-info-lter"></i></a> <a><i
+							class="fa fa-refresh report-btn text-info-lter"></i></a> <a><i
+							class="fa fa-arrows-alt report-btn text-info-lter"></i></a>
+					</span>
+				</div>
+				<div class="panel-body">
+					<div line-chart config="chartConfig" data="pueTrends"
+						height="200px"></div>
+				</div>
+			</div>
+		</div>
+		<div class="col col-md-4">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					碳排放统计 <span class="pull-right"> <a><i
+							class="fa fa-search report-btn text-info-lter"></i></a> <a><i
+							class="fa fa-refresh report-btn text-info-lter"></i></a> <a><i
+							class="fa fa-arrows-alt report-btn text-info-lter"></i></a>
+					</span>
+				</div>
+				<div class="panel-body">
+					<div bar-chart config="chartConfig" data="powerTrends"
+						height="200px"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-white">
+					各指标环比增长及分析 <span class="pull-right"> <a><i
+							class="fa fa-search report-btn text-info-lter"></i></a> <a><i
+							class="fa fa-refresh report-btn text-info-lter"></i></a> <a><i
+							class="fa fa-arrows-alt report-btn text-info-lter"></i></a>
+					</span>
+				</div>
+				<div class="table-responsive">
+					<table class="table table-striped b-link">
+						<thead>
+							<tr>
+								<th class="bule-text">数据中心</th>
+								<th class="bule-text">碳排放</th>
+								<th class="bule-text">碳排放增幅</th>
+								<th class="bule-text">用电总量</th>
+								<th class="bule-text">用电量增幅</th>
+								<th class="bule-text">流量</th>
+								<th class="bule-text">增幅</th>
+								<th class="bule-text" style="width: 30%;">综合分析</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>廊坊</td>
+								<td>987223</td>
+								<td><span class="rise">+12.4% <i
+										class="fa fa-level-up icon text-danger-lter"></i></span></td>
+								<td>987223</td>
+								<td><span class="rise">+10.3% <i
+										class="fa fa-level-up icon text-danger-lter"></i></span></td>
+								<td>132</td>
+								<td><span class="rise">+14.4% <i
+										class="fa fa-level-up icon text-danger-lter"></i></span></td>
+								<td>
+									<p>2016年以来，随着上架率增加并趋于稳定，基地PUE值也趋于稳定，并在1.5上下小范围浮动。</p>
+								</td>
+							</tr>
+							<tr>
+								<td>呼和浩特</td>
+								<td>987223</td>
+								<td><span class="rise">+12.4% <i
+										class="fa fa-level-up icon text-danger-lter"></i></span></td>
+								<td>987223</td>
+								<td><span class="decline">-2.3% <i
+										class="fa fa-level-down icon text-success-lter"></i></span></td>
+								<td>132</td>
+								<td><span class="decline">-7.4% <i
+										class="fa fa-level-down icon text-success-lter"></i></span></td>
+								<td>
+									<p>2016年以来，随着上架率增加并趋于稳定，基地PUE值也趋于稳定，并在1.5上下小范围浮动。</p>
+								</td>
+							</tr>
+							<tr>
+								<td>哈尔滨</td>
+								<td>987223</td>
+								<td><span class="rise">+12.4% <i
+										class="fa fa-level-up icon text-danger-lter"></i></span></td>
+								<td>987223</td>
+								<td><span class="rise">+10.3% <i
+										class="fa fa-level-up icon text-danger-lter"></i></span></td>
+								<td>132</td>
+								<td><span class="rise">+14.4% <i
+										class="fa fa-level-up icon text-danger-lter"></i></span></td>
+								<td>
+									<p>2016年以来，随着上架率增加并趋于稳定，基地PUE值也趋于稳定，并在1.5上下小范围浮动。</p>
+								</td>
+							</tr>
+							<tr>
+								<td>贵安</td>
+								<td>987223</td>
+								<td><span class="rise">+12.4% <i
+										class="fa fa-level-up icon text-danger-lter"></i></span></td>
+								<td>987223</td>
+								<td><span class="rise">+10.3% <i
+										class="fa fa-level-up icon text-danger-lter"></i></span></td>
+								<td>132</td>
+								<td><span class="rise">+14.4% <i
+										class="fa fa-level-up icon text-danger-lter"></i></span></td>
+								<td>
+									<p>2016年以来，随着上架率增加并趋于稳定，基地PUE值也趋于稳定，并在1.5上下小范围浮动。</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

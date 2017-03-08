@@ -1,0 +1,74 @@
+<div class="bg-light lter b-b wrapper">
+	<h1 class="m-n font-thin h3">报表管理</h1>
+</div>
+
+<div class="wrapper" ng-controller="ReportController">
+	<div class="row m-r-none">
+		<div class="col-xs-6">
+			<h4>报表条件选择</h4>
+		</div>
+	</div>
+	<div class="row m-t-sm m-r-none">
+		<form role="form" class="form-horizontal">
+			<section class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-2 control-label">月份：</label>
+					<div class="col-sm-4">
+						<select class="form-control">
+							<option>2016-11</option>
+						</select>
+					</div>
+				</div>
+			</section>
+			<section class="pull-right">
+				<button type="submit" class="btn w-xs btn-primary">提交</button>
+			</section>
+		</form>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<i class="fa fa-table"></i> 计费流量统计报表（月） <span class="pull-right">
+						<a title="刷新"><i
+							class="fa fa-refresh report-btn text-info-lter"></i></a> <a
+						title="打印"><i class="fa fa-print report-btn text-info-lter"></i></a>
+						<a title="下载"><i
+							class="fa fa-download report-btn text-info-lter"></i></a> <a
+						title="最大化"><i
+							class="fa fa-arrows-alt report-btn text-info-lter"></i></a>
+					</span>
+				</div>
+				<div class="panel-body">
+					<table id="report" class="table table-striped table-bordered">
+						<thead>
+							<tr>
+								<th>客户名称</th>
+								<th>计费速率</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr>
+								<td>&nbsp;</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

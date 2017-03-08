@@ -1,0 +1,203 @@
+<div class="bg-light lter b-b wrapper">
+	<h1 class="m-n font-thin h3">报表管理</h1>
+</div>
+
+<div class="wrapper" ng-controller="Report3Controller">
+	<div class="row m-r-none">
+        <div class="col-xs-6">
+            <h4>报表条件选择</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-md-12 ">
+            <div class="panel panel-default">
+                <div class="panel-heading" ng-click="toggle3()" style="font-weight:normal">
+                    <div class="col-md-12 demand" ng-init="app.setting.Recycle3 = false" ng-click="app.setting.Recycle3 = !app.setting.Recycle3" style="padding:0px;margin-bottom:4px;">
+                        条件查询
+                        <a href class="pull-right"> 
+                            <span style="font-size: 25px;" class="fa {{app.setting.Recycle3 ? 'fa-angle-up' : 'fa-angle-down'}}">
+                        </span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="panel-body panel-body1" style="padding: 0px;">
+                    <div ng-hide="myVar">
+                        <form role="form">
+                            <div>
+                                <section class="col-sm-2">
+                                    <div class="form-group">
+                                        <label>基地：</label> <select class="form-control">
+                                            <option>哈尔滨基地</option>
+                                        </select>
+                                    </div>
+                                </section>
+                                <section class="col-sm-2">
+                                    <div class="form-group">
+                                        <label>楼宇：</label> <select class="form-control">
+                                            <option>-所有楼宇-</option>
+                                        </select>
+                                    </div>
+                                </section>
+                                <section class="col-sm-2">
+                                    <div class="form-group">
+                                        <label>模块：</label> <select class="form-control">
+                                            <option>-所有模块-</option>
+                                        </select>
+                                    </div>
+                                </section>
+                                <section class="col-sm-2">
+                                    <div class="form-group">
+                                        <label>楼层：</label> <select class="form-control">
+                                            <option>-所有楼层-</option>
+                                        </select>
+                                    </div>
+                                </section>
+                                <section class="col-sm-2">
+                                    <div class="form-group">
+                                        <label>机房：</label> <select class="form-control">
+                                            <option>-所有机房-</option>
+                                        </select>
+                                    </div>
+                                </section>
+                                <section class="col-sm-2">
+                                    <div class="form-group">
+                                        <label>设备类型：</label> <select class="form-control">
+                                            <option>-所有类型-</option>
+                                        </select>
+                                    </div>
+                                </section>
+                            </div>
+                            <div>
+                                <section class="col-sm-2">
+                                    <div class="form-group">
+                                        <label>设备：</label> <select class="form-control">
+                                            <option>-所有设备-</option>
+                                        </select>
+                                    </div>
+                                </section>
+                                <section class="col-sm-2">
+                                    <div class="form-group">
+                                        <label>起始时间：</label>
+                                        <div class="input-group date">
+                                            <input type="text" class="form-control"><span
+                                                class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="col-sm-2">
+                                    <div class="form-group">
+                                        <label>结束时间：</label>
+                                        <div class="input-group date">
+                                            <input type="text" class="form-control"><span
+                                                class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="pull-right m-t-md" style="margin-right: 15px;">
+                                    <button class="btn w-xs btn-default">保存条件</button>
+                                    <button class="btn w-xs btn-default">定时发送</button>
+                                    <button class="btn w-xs btn-primary">提交</button>
+                                </section>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<i class="fa fa-table"></i> 数据机房列头柜运行电量巡检记录表（日）  <span class="pull-right">
+						<a title="刷新"><i
+							class="fa fa-refresh report-btn text-info-lter"></i></a> <a
+						title="打印"><i class="fa fa-print report-btn text-info-lter"></i></a>
+						<a title="下载"><i
+							class="fa fa-download report-btn text-info-lter"></i></a> <a
+						title="最大化"><i
+							class="fa fa-arrows-alt report-btn text-info-lter"></i></a>
+					</span>
+				</div>
+				<div class="panel-body">
+					<table id="report" class="table table-striped table-bordered">
+						<thead>
+							<tr>
+								<th> </th>
+                                <th colspan="6" style="text-align : center">头柜主路电源</th>
+                                <th> </th>
+                                <th colspan="6" style="text-align : center">头柜备路电源</th>
+                                <th> </th>
+							</tr>
+                            <tr>
+								<th>列头柜编号</th>
+                                <th colspan="3" style="text-align : center">三相相电压(V)</th>
+                                <th colspan="3" style="text-align : center">三相电流(A)</th>
+                                <th>有功电度(kW·h)</th>
+                                <th colspan="3" style="text-align : center">三相相电压(V)</th>
+                                <th colspan="3" style="text-align : center">三相电流(A)</th>
+                                <th>有功电度(kW·h)</th>
+                            </tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>&nbsp;</td>
+				                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+				                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+				                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
